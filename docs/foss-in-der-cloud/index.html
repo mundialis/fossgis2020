@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>FOSS in der Cloud</title>
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<img id="logo-l" class="logo" src="img/terrestris_logo_web.png" alt="Logo from mundialis" width="100" />
+<img id="logo-r" class="logo" src="img/mundialis_logo_web.png" alt="Logo from terrestris" width="100" />
+
+<div id="impress">
+
+    <!--
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        Note: data-x/y/z attributes, if not defined, by default will inherit the value of the previous step
+    -->
+
+    <div id="start" class="step slide" data-x="0" data-y="-1500">
+        <h1>FOSS in der Cloud</h1>
+        <!-- <h2>FOSSGIS 2020, 12. März 15:30 Uhr</h2> -->
+    </div>
+
+    <div id="company" class="step slide" data-x="0" data-y="-1500" data-z="-10">
+        <img src="img/mundialis-terrestris.JPG"/>
+    </div>
+
+    <div id="content" class="step slide" data-x="0" data-y="-1500" data-z=-20>
+        <ul><li>Einführung und Basics</li><li>Beispiel</li><li>Ausblick</li></ul>
+    </div>
+
+    <div id="cloud" class="step" data-x="0" data-y="0" data-scale="4">
+        <img height="500" src="img/cloud.svg" />
+    </div>
+
+    <div id="cloud1" class="step slide" data-x="0" data-y="500" data-z="-500">
+        <h2>Einführung und Basics</h2>
+        <blockquote>
+            Cloud-Computing (deutsch Rechnerwolke oder Datenwolke) ist eine IT-Infrastruktur,
+             die Speicherplatz, Rechenleistung oder Anwendungssoftware als Dienstleistung beinhaltet.
+            </br></br>
+            IT-Infrastrukturen werden über ein Rechnernetz zur Verfügung gestellt, ohne auf dem lokalen Rechner installiert zu sein.
+            </br></br>
+            Angebot und Nutzung erfolgen durch technische Schnittstellen und Protokolle.
+            </br></br>
+        </blockquote>
+        <q>Frei nach <a href="https://de.wikipedia.org/wiki/Cloud_Computing">Wikipedia</a>, abgerufen am 06.03.2020</q>
+    </div>
+
+    <div id="cloud2" class="step slide" data-x="0" data-y="500" data-z="-600">
+        <h2>Einführung und Basics</h2>
+        <ul>
+            <li>Durch wachsende Geodatenpools (Copernicus oder Landsat)</li>
+            <li>Anforderungen an Hard- und Software für die Geodatenprozessierung steigen</li>
+            <li>Arbeitsplatz immer wieder Hard- und Software nachrüsten</li>
+            <li>Anschaffung, Betrieb und Wartung eigener Hardware. Die Benutzer können auf
+                praktisch unbegrenzt verfügbare Ressourcen zugreifen ohne sich um die Installation und Pflege von Hard- und Softwareware kümmern zu müssen.</li>
+            <li>Kapitalkosten vs laufende Kosten</li>
+            <li>Automatisierung und Übertragbarkeit</li>
+        </ul>
+    </div>
+
+    <div id="cloud3" class="step slide" data-x="0" data-y="500" data-z="-700">
+        <h2>Einführung und Basics</h2>
+        <p>Infrastructure as a Service (IaaS), Platform as a Service (PaaS) und Software as a Service (SaaS)</p>
+        <ul>
+            <li>IaaS: Bereitstellung von technischer Infrastruktur wie Rechenleistung, Netzwerken oder Speicherplatz</li>
+            <li>PaaS: Bereitstellung einer Plattform für Entwicklung und das Anbieten eigener Software-Anwendungen</li>
+            <li>SaaS: auch Software on Demand , Bereitstellung reine Software-Anwendungen als Cloud-Dienst</li>
+        </ul>
+    </div>
+
+    <div id="cloud4" class="step slide" data-x="0" data-y="500" data-z="-800">
+        <h2>Konzepte des Cloud Computings</h2>
+        <ul>
+            <li>Serviceorientierung</li>
+            <li>Cloud Computing nutzt Virtualisierung und das Internet zur dynamischen
+                Bereitstellung von IT-Ressourcen. Dabei kann es sich um IT-Infrastruktur,
+                Plattformen oder Anwendungen aller Art handeln. Cloud Computing bezeichnet also
+                sowohl Anwendungen, welche als Dienste über das Internet angeboten werden, als auch
+                auf die Hard- und Software, die in Rechenzentren zu deren Bereitstellung benötigt werden.
+                 Die Abrechnung erfolgt dabei stets nach Verbrauch.</li>
+        </ul>
+    </div>
+
+    <div id="tools" class="step" data-x="0" data-y="500" data-z="0" data-rotate="-90" data-scale="5">
+        <h2>Konzepte des Cloud Computings</h2>
+        <p>Verfügbare Tools</p>
+        <img height="50" src="img/logos/terraform-logo-hashicorp-3f10732f.svg" />
+        <img height="50" src="img/logos/OpenStack-Logo-Horizontal.svg" />
+        <img height="50" src="img/logos/Logotype_RH_OpenShift_wLogo_RGB_Black.svg" />
+        <img height="50" src="img/logos/Kubernetes_logo.svg" />
+        <img height="50" src="img/logos/helm-logo.svg" />
+        <img height="50" src="img/logos/Docker_(container_engine)_logo.svg" />
+        <img height="50" src="img/logos/docker-swarm-hero2.svg" />
+        <img height="50" src="img/logos/Otc-logo.png" />
+        <img height="50" src="img/logos/1920px-Google_Cloud_Logo.svg.png" />
+    </div>
+
+
+</div>
+
+<div id="impress-toolbar"></div>
+
+<!--
+
+    Hint is not related to impress.js in any way.
+
+    But it can show you how to use impress.js features in creative way.
+
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+
+-->
+<div class="hint">
+    <p>FOSSGIS 2020 - 12. März 15:30 Uhr</p>
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
