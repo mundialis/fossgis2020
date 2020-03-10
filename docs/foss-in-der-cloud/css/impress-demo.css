@@ -58,18 +58,18 @@ table {
 } */
 
 body {
-    font-family: 'PT Sans', sans-serif;
-    min-height: 740px;
+  font-family: 'PT Sans', sans-serif;
+  min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+  background: rgb(215, 215, 215);
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(225, 225, 225)));
+  background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+  background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+  background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+  background:      -o-radial-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+  background:         radial-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
 
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 10%), url(../img/freiburg-040302.jpg) center/cover no-repeat fixed;
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 10%), url(../img/freiburg-040302.jpg) center/cover no-repeat fixed; */
 }
 
 /*
@@ -82,24 +82,46 @@ i, em { font-style: italic }
     ... and give links a nice look.
 */
 a {
-    color: inherit;
-    text-decoration: none;
-    padding: 0 0.1em;
-    background: rgba(255,255,255,0.5);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
-    border-radius: 0.2em;
+  color: inherit;
+  text-decoration: none;
+  padding: 0 0.1em;
+  background: rgba(255,255,255,0.5);
+  text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+  border-radius: 0.2em;
 
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition:    0.5s;
+  -ms-transition:     0.5s;
+  -o-transition:      0.5s;
+  transition:         0.5s;
 }
 
 a:hover,
 a:focus {
     background: rgba(255,255,255,1);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+code {
+    background: #3f3f3f;
+    color: #dcdcdc;
+    font-family: monospace;
+    text-transform: none;
+
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    /* max-height: 400px; */
+    word-wrap: normal;
+
+    font-weight: normal;
+    white-space: pre-wrap;
+
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
 
 /*
@@ -158,6 +180,32 @@ a:focus {
     line-height: 1.5;
 
     background-color: rgba(255,255,255,0.65);
+}
+
+.step.large {
+    width: 1400px;
+}
+
+.ortho {
+    height: 80%;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.default {
+    background: url(../img/mundialis-terrestris.JPG) center/cover no-repeat fixed;
+}
+
+.image {
+    background: url(../img/freiburg-040302.jpg) center/cover no-repeat fixed;
+}
+
+.laptop-overlay {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 40px;
+    background: url(../img/freiburg-040302.jpg) center/cover no-repeat fixed;
 }
 
 /*
@@ -715,32 +763,26 @@ body.impress-mouse-timeout {
 */
 
 
+/* Custom CT */
 
-
-#### custom CT ####
-
-.logo {
-  margin-right: 2em;
-  background-color: rgba(255,255,255,0.3);
-  padding: 0.2em;
-  position: fixed;
-  top: 1em;
-  -webkit-box-shadow: 2px 2px 190px 80px rgba(255,255,255,0.34);
-  -moz-box-shadow: 2px 2px 190px 80px rgba(255,255,255,0.34);
-  -ms-box-shadow: 2px 2px 190px 80px rgba(255,255,255,0.34);
-  -o-box-shadow: 2px 2px 190px 80px rgba(255,255,255,0.34);
-  box-shadow: 2px 2px 190px 80px rgba(255,255,255,0.34);
+img.logo {
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(255, 255, 255, 1));
+  filter: drop-shadow(5px 5px 3px rgba(255, 255, 255, 1));
 }
 
 #logo-l {
-    float: left;
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 
 #logo-r {
-    right: 0;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 
 #company img{
-    max-width:100%;
-    max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
