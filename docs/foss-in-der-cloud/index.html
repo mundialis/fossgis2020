@@ -42,13 +42,9 @@
     </div>
 
     <div id="content" class="step slide" data-x="0" data-y="-25000" data-z="0" data-scale="10">
-      <h2>Überblick</h2>
+      <h2>Inhalt</h2>
       <ul>
-        <li>Was?</li>
-        <li>Warum?</li>
-        <li>Wazu?</li>
-        <li>Wie?</li>
-        <li>Womit?</li>
+        <li>Warum und wie in der Cloud</li>
         <li>Beispiel</li>
         <li>Ausblick</li>
       </ul>
@@ -195,18 +191,18 @@
       <img height="500" src="img/icons/cloud.svg" />
     </div>
 
-    <div id="laptop" class="step transparent" data-x="0" data-y="70000" data-z="-10000" data-rotate="0" data-scale="10" on>
+    <!-- <div id="laptop" class="step transparent" data-x="0" data-y="70000" data-z="-10000" data-rotate="0" data-scale="10" on>
       <img height="50" src="img/icons/laptop.svg" />
       <!-- <div class="laptop-overlay" /> -->
-    </div>
+    <!-- </div> --> -->
 
-    <div id="example-before" class="step transparent" data-x="0" data-y="70000" data-z="-30000" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
-      <img height="50" src="img/icons/laptop.svg" />
-      <img height="50" src="img/logos/shogun-logo-full-150px.png" />
-      <img height="50" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
-      <img height="50" src="img/logos/actinia_Logo_highres.svg" />
-      <img height="50" src="img/logos/GeoServer_Logo.svg" />
+    <div id="example-before" class="step transparent" data-x="0" data-y="70000" data-z="-30000" data-scale="50">
+      <!-- <img height="50" src="img/icons/terminal.jpeg" /> -->
+      <img height="1000" src="img/icons/laptop.svg" />
+      <img class="img-inside one" height="50" src="img/logos/shogun-logo-full-150px.png" />
+      <img class="img-inside two"height="150" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
+      <img class="img-inside three"height="150" src="img/logos/actinia_Logo_highres.svg" />
+      <img class="img-inside four" height="80" src="img/logos/GeoServer_Logo.svg" />
     </div>
 
     <div id="example" class="step slide transparent" data-x="0" data-y="80000" data-z="-30000" data-scale="10">
@@ -504,34 +500,21 @@ helm install actinia
 NAME                                     READY   STATUS    RESTARTS   AGE
 pod/dev-actinia-0                        1/1     Running   0          14h
 pod/dev-geoserver-7cc754556-9vcv9        1/1     Running   0          14h
-pod/dev-landing-page-bf54476cd-6t5ql     1/1     Running   0          15h
-pod/dev-nfs-server-7fbf6cdcf9-fz4lg      1/1     Running   0          15h
 pod/dev-postgis-0                        1/1     Running   0          14h
 pod/dev-redis-master-0                   1/1     Running   0          15h
 pod/dev-shogun-hermosa-c7f5fcc94-zxpc8   1/1     Running   0          14h
 
 NAME                                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
-service/cm-acme-http-solver-ncf6v   NodePort    10.36.4.43     <none>        8089:30203/TCP               77d
 service/dev-actinia                 NodePort    10.36.10.234   <none>        8088:31571/TCP               16d
 service/dev-geoserver               NodePort    10.36.1.139    <none>        8080:30435/TCP               86d
-service/dev-landing-page            NodePort    10.36.4.201    <none>        80:30368/TCP                 79d
-service/dev-nfs-server              ClusterIP   10.36.10.227   <none>        2049/TCP,20048/TCP,111/TCP   113d
 service/dev-postgis                 ClusterIP   10.36.7.213    <none>        5432/TCP                     118d
-service/dev-redis-headless          ClusterIP   None           <none>        6379/TCP                     118d
 service/dev-redis-master            ClusterIP   10.36.12.217   <none>        6379/TCP                     118d
 service/dev-shogun-hermosa          NodePort    10.36.15.40    <none>        8080:31167/TCP               22h
 
 NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
 deployment.apps/dev-geoserver        1/1     1            1           86d
-deployment.apps/dev-landing-page     1/1     1            1           79d
-deployment.apps/dev-nfs-server       1/1     1            1           113d
 deployment.apps/dev-shogun-hermosa   1/1     1            1           22h
 
-NAME                                           DESIRED   CURRENT   READY   AGE
-replicaset.apps/dev-geoserver-7cc754556        1         1         1       86d
-replicaset.apps/dev-landing-page-bf54476cd     1         1         1       79d
-replicaset.apps/dev-nfs-server-7fbf6cdcf9      1         1         1       113d
-replicaset.apps/dev-shogun-hermosa-c7f5fcc94   1         1         1       22h
 NAME                                READY   AGE
 statefulset.apps/dev-actinia        1/1     16d
 statefulset.apps/dev-postgis        1/1     118d
@@ -545,13 +528,13 @@ statefulset.apps/dev-redis-master   1/1     118d
     </div>
 
     <div id="example-after" class="step transparent" data-x="0" data-y="275000" data-z="50000" data-scale="50">
-      <img height="50" src="img/icons/terminal.jpeg" />
-      <img height="50" src="img/icons/laptop.svg" />
-      <img height="50" src="img/icons/cloud.svg" />
-      <img height="50" src="img/logos/shogun-logo-full-150px.png" />
-      <img height="50" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
-      <img height="50" src="img/logos/actinia_Logo_highres.svg" />
-      <img height="50" src="img/logos/GeoServer_Logo.svg" />
+      <!-- <img height="50" src="img/icons/terminal.jpeg" /> -->
+      <img height="1000" src="img/icons/laptop.svg" />
+      <img class="img-inside one" height="50" src="img/logos/shogun-logo-full-150px.png" />
+      <img class="img-inside two"height="150" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
+      <img class="img-inside three"height="150" src="img/logos/actinia_Logo_highres.svg" />
+      <img class="img-inside four" height="80" src="img/logos/GeoServer_Logo.svg" />
+      <!-- <img height="50" src="img/icons/cloud.svg" /> -->
     </div>
 
     <div id="result1" class="step slide" data-x="100000" data-y="275000" data-scale="50">
