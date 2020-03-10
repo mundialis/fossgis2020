@@ -62,9 +62,6 @@ actinia
 
 ```
 ```
-12:12 $ helm create actinia
-Creating actinia
-
 12:12 $ tree actinia
 actinia
 ├── charts
