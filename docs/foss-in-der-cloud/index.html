@@ -129,40 +129,66 @@
 
     <div id="tools" class="step slide" data-x="0" data-y="20000" data-z="-30000" data-scale="10">
       <h2>Verfügbare Tools</h2>
-      <img height="50" src="img/logos/terraform-logo-hashicorp-3f10732f.svg" />
-      <img height="50" src="img/logos/OpenStack-Logo-Horizontal.SVG" />
-      <img height="50" src="img/logos/Logotype_RH_OpenShift_wLogo_RGB_Black.svg" />
-      <img height="50" src="img/logos/Kubernetes_logo.svg" />
-      <img height="50" src="img/logos/helm-logo.svg" />
-      <img height="50" src="img/logos/Docker_(container_engine)_logo.svg" />
-      <img height="50" src="img/logos/docker-swarm-hero2.png" />
-      <img height="50" src="img/logos/Otc-logo.png" />
-      <img height="50" src="img/logos/1920px-Google_Cloud_Logo.svg.png" />
+      <div class="image-block">
+        <div class="image-row">
+          <img height="50" src="img/logos/terraform-logo-hashicorp-3f10732f.svg" />
+          <img height="50" src="img/logos/OpenStack-Logo-Horizontal.SVG" />
+          <img height="50" src="img/logos/Logotype_RH_OpenShift_wLogo_RGB_Black.svg" />
+        </div>
+        <div class="image-row">
+          <img height="50" src="img/logos/Kubernetes_logo.svg" />
+          <img height="50" src="img/logos/helm-logo.svg" />
+          <img height="50" src="img/logos/Docker_(container_engine)_logo.svg" />
+        </div>
+        <div class="image-row">
+          <img height="50" src="img/logos/docker-swarm-hero2.png" />
+          <img height="50" src="img/logos/Otc-logo.png" />
+          <img height="50" src="img/logos/1920px-Google_Cloud_Logo.svg.png" />
+        </div>
+      </div>
     </div>
 
     <div id="tools1" class="step slide" data-x="0" data-y="30000" data-z="-30000" data-scale="10">
       <h2>Verfügbare Tools</h2>
-      <p>IaaS Nutzung - Stellen (freie) Architektur für Cloud-Computing zur Verfügung</p>
-      <img height="50" src="img/logos/OpenStack-Logo-Horizontal.SVG" />
-      <img height="50" src="img/logos/Otc-logo.png" />
-      <img height="50" src="img/logos/1920px-Google_Cloud_Logo.svg.png" />
+      <ul>
+        <li>IaaS Nutzung - Stellen (freie) Architektur für Cloud-Computing zur Verfügung</li>
+      </ul>
+      <br/>
+      <br/>
+      <div class="image-row">
+        <img height="50" src="img/logos/OpenStack-Logo-Horizontal.SVG" />
+        <img height="50" src="img/logos/Otc-logo.png" />
+        <img height="50" src="img/logos/1920px-Google_Cloud_Logo.svg.png" />
+      </div>
     </div>
 
     <div id="tools2" class="step slide" data-x="0" data-y="40000" data-z="-30000" data-scale="10">
       <h2>Verfügbare Tools</h2>
-      <p> Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen</p>
-      <img height="50" src="img/logos/Logotype_RH_OpenShift_wLogo_RGB_Black.svg" />
-      <img height="50" src="img/logos/Kubernetes_logo.svg" />
-      <img height="50" src="img/logos/docker-swarm-hero2.png" />
+      <ul>
+        <li>Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen</li>
+      </ul>
+      <br/>
+      <br/>
+      <div class="image-row">
+        <img height="50" src="img/logos/Logotype_RH_OpenShift_wLogo_RGB_Black.svg" />
+        <img height="50" src="img/logos/Kubernetes_logo.svg" />
+        <img height="50" src="img/logos/docker-swarm-hero2.png" />
+      </div>
     </div>
 
     <div id="tools3" class="step slide" data-x="0" data-y="50000" data-z="-30000" data-scale="10">
       <h2>Verfügbare Tools</h2>
-      <p>Open Source Infrastructure as code Software Tool</p>
-      <p>Freie Software zur Isolierung von Anwendungen mit Containervirtualisierung.</p>
-      <img height="50" src="img/logos/terraform-logo-hashicorp-3f10732f.svg" />
-      <img height="50" src="img/logos/helm-logo.svg" />
-      <img height="50" src="img/logos/Docker_(container_engine)_logo.svg" />
+      <ul>
+        <li>Open Source Infrastructure as code Software Tool</li>
+        <li>Freie Software zur Isolierung von Anwendungen mit Containervirtualisierung</li>
+      </ul>
+      <br/>
+      <br/>
+      <div class="image-row">
+        <img height="50" src="img/logos/terraform-logo-hashicorp-3f10732f.svg" />
+        <img height="50" src="img/logos/helm-logo.svg" />
+        <img height="50" src="img/logos/Docker_(container_engine)_logo.svg" />
+      </div>
     </div>
 
     <div id="cloud-again2" class="step transparent" data-x="0" data-y="0" data-z="0" data-scale="50">
@@ -224,12 +250,7 @@
       </ul>
     </div>
 
-    <div id="example-laptop" class="step transparent" data-x="0" data-y="110000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/laptop.svg" />
-    </div>
-
-    <div id="build1-dir" class="step large" data-x="0" data-y="125000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="build1-dir" class="step transparent large" data-x="0" data-y="125000" data-z="0" data-scale="10">
       <pre>
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -253,8 +274,7 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
       </pre>
     </div>
 
-    <div id="build1-dir-red" class="step large" data-x="0" data-y="135000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="build1-dir-red" class="step transparent large" data-x="0" data-y="135000" data-z="0" data-scale="10">
       <pre>
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -278,8 +298,7 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
       </pre>
     </div>
 
-    <div id="build2-dir-less" class="step large" data-x="0" data-y="145000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="build2-dir-less" class="step transparent large" data-x="0" data-y="145000" data-z="0" data-scale="10">
       <pre>
         <code>
   ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -296,8 +315,7 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
       </pre>
     </div>
 
-    <div id="build2-Dockerfile-red" class="step large" data-x="0" data-y="155000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="build2-Dockerfile-red" class="step transparent large" data-x="0" data-y="155000" data-z="0" data-scale="10">
       <pre>
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -314,8 +332,7 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
       </pre>
     </div>
 
-    <div id="build2-not" class="step large" data-x="0" data-y="165000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="build2-not" class="step transparent large" data-x="0" data-y="165000" data-z="0" data-scale="10">
       <pre>
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -343,8 +360,7 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
       </ul>
     </div>
 
-    <div id="deploy1-dir" class="step large" data-x="0" data-y="185000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy1-dir" class="step transparent large" data-x="0" data-y="185000" data-z="0" data-scale="10">
       <pre>
         <code>
 12:12 $ helm create actinia
@@ -367,8 +383,7 @@ actinia
       </pre>
     </div>
 
-    <div id="deploy1-morefiles" class="step large" data-x="0" data-y="195000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy1-morefiles" class="step transparent large" data-x="0" data-y="195000" data-z="0" data-scale="10">
       <pre>
         <code>
 12:12 $ tree actinia
@@ -391,8 +406,7 @@ actinia
       </pre>
     </div>
 
-    <div id="deploy2-configmap" class="step large" data-x="0" data-y="205000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy2-configmap" class="step transparent large" data-x="0" data-y="205000" data-z="0" data-scale="10">
       <pre>
         <code>
 apiVersion: v1
@@ -420,8 +434,7 @@ data:
       </pre>
     </div>
 
-    <div id="deploy3-dc" class="step large" data-x="0" data-y="215000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy3-dc" class="step transparent large" data-x="0" data-y="215000" data-z="0" data-scale="10">
       <pre>
         <code>
 apiVersion: apps/v1
@@ -472,8 +485,7 @@ spec:
       </pre>
     </div>
 
-    <div id="deploy4-install" class="step large" data-x="0" data-y="225000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy4-install" class="step transparent large" data-x="0" data-y="225000" data-z="0" data-scale="10">
       <pre>
         <code>
 kubectl config use-context gke_hermosa-abcdefghi
@@ -485,8 +497,7 @@ helm install actinia
       </pre>
     </div>
 
-    <div id="deploy5-getall" class="step large" data-x="0" data-y="235000" data-z="0" data-scale="10">
-      <img height="50" src="img/icons/terminal.jpeg" />
+    <div id="deploy5-getall" class="step transparent large" data-x="0" data-y="235000" data-z="0" data-scale="10">
       <pre>
         <code>
 09:17 $ kubectl get all
@@ -576,7 +587,7 @@ statefulset.apps/dev-redis-master   1/1     118d
       </ul>
     </div>
 
-    <div id="ende" class="step transparent ende" data-x="0" data-y="350000" data-rotate-x="-90" data-rotate-y="0" data-scale="100">
+    <div id="ende" class="step ende" data-x="0" data-y="350000" data-rotate-x="-90" data-rotate-y="0" data-scale="100">
       <h2>Danke. Fragen?</h2>
     </div>
 

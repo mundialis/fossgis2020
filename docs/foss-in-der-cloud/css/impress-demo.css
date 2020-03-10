@@ -44,7 +44,6 @@ table {
     border-spacing: 0;
 }
 
-
 /*
     Now here is when interesting things start to appear.
 
@@ -293,7 +292,7 @@ code {
 }
 
 .slide li {
-    line-height: 66px;
+    line-height: 50px;
 }
 
 /*
@@ -817,4 +816,17 @@ img.logo {
 
 #example img {
     height: 100%;
+}
+
+.image-block {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
