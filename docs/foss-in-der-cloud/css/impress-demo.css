@@ -833,22 +833,42 @@ img.logo {
 
 }
 
-#example-before img.img-inside.one, #example-after img.img-inside.one {
+#example-before img.img-inside.one {
+    top: 250px;
+    left: 220px;
+}
+
+#example-before img.img-inside.two {
+    top: 230px;
+    left: 550px;
+}
+
+#example-before img.img-inside.three {
+    top: 350px;
+    left: 230px;
+}
+
+#example-before img.img-inside.four {
+    top: 400px;
+    left: 460px;
+}
+
+#example-after img.img-inside.one {
     top: 400px;
     left: 220px;
 }
 
-#example-before img.img-inside.two, #example-after img.img-inside.two {
+#example-after img.img-inside.two {
     top: 380px;
     left: 550px;
 }
 
-#example-before img.img-inside.three, #example-after img.img-inside.three {
+#example-after img.img-inside.three {
     top: 500px;
     left: 230px;
 }
 
-#example-before img.img-inside.four, #example-after img.img-inside.four {
+#example-after img.img-inside.four {
     top: 570px;
     left: 460px;
 }
