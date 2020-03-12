@@ -275,19 +275,19 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
 11:02 $ ls -lah
--rw-r--r-- 1 user user 1,2K Mär  6 11:36 actinia.cfg
+<p class="strikethrough">-rw-r--r-- 1 user user 1,2K Mär  6 11:36 actinia.cfg</p>
 -rw-r--r-- 1 user user 1,4K Mär  6 11:02 Dockerfile
--rw-r--r-- 1 user user   19 Mär  6 11:02 ESA_credentials.txt
+<p class="strikethrough">-rw-r--r-- 1 user user   19 Mär  6 11:02 ESA_credentials.txt</p>
 drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 -rw-r--r-- 1 user user  491 Mär  6 11:02 .gitlab-ci.yml
-drwxr-xr-x 3 user user 4,0K Mär  6 11:02 pc_templates
+<p class="strikethrough">drwxr-xr-x 3 user user 4,0K Mär  6 11:02 pc_templates</p>
 -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
-COPY actinia.cfg /etc/default/actinia
-COPY ESA_credentials.txt ESA_credentials.txt
-COPY pc_templates /etc/default/actinia_pc_templates
+<p class="strikethrough">COPY actinia.cfg /etc/default/actinia</p>
+<p class="strikethrough">COPY ESA_credentials.txt ESA_credentials.txt</p>
+<p class="strikethrough">COPY pc_templates /etc/default/actinia_pc_templates</p>
 
 RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
           </code>
@@ -323,12 +323,13 @@ drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
-RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
+<p class="strikethrough">RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel</p>
         </code>
       </pre>
     </div>
 
     <div id="build2-not" class="step transparent large" data-x="0" data-y="165000" data-z="0" data-scale="10">
+        <img id="red-cross" src="img/icons/mcol_cross.svg" />
       <pre>
         <code>
 ✔ ~/repos/myproject/actinia-build [master {origin/master}|✔]
@@ -340,7 +341,7 @@ drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
-RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
+<p class="strikethrough">RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel</p>
         </code>
       </pre>
     </div>
@@ -430,53 +431,43 @@ data:
       </pre>
     </div>
 
-    <div id="deploy3-dc" class="step transparent large" data-x="0" data-y="215000" data-z="0" data-scale="10">
+    <div id="deploy3-dc" class="step transparent large" data-x="0" data-y="219000" data-z="0" data-scale="10">
       <pre>
         <code>
 apiVersion: apps/v1
 kind: Deployment
 spec:
-    replicas: {{ .Values.replicaCount }}
-    template:
+  replicas: {{ .Values.replicaCount }}
+  template:
     spec:
-        containers:
+      containers:
         - name: {{ .Chart.Name }}
-            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-            command: ['sh']
-            args: ['/src/start/start.sh']
-            volumeMounts:
-            - name: config
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          command: ['sh']
+          args: ['/src/start/start.sh']
+          volumeMounts:
+          - name: config
             mountPath: /etc/default/actinia-config
-            - name: secret
+          - name: secret
             mountPath: /etc/default/actinia-secret
-            - name: pctemplates
+          - name: pctemplates
             mountPath: /etc/default/actinia_pc_templates
-            - name: grassdb
-            mountPath: /actinia_core/grassdb/
-            env:
-            - name: DEFAULT_CONFIG_PATH
+          env:
+          - name: DEFAULT_CONFIG_PATH
             value: /etc/default/actinia-config/actinia.cfg
         volumes:
-        - name: config
+          - name: config
             configMap:
-            name: {{ include "actinia.fullname" . }}
-            items:
-            - key: actinia-core-config
-                path: actinia.cfg
-        - name: secret
+              name: {{ include "actinia.fullname" . }}
+          - name: secret
             secret:
-    secretName: {{ include "actinia.fullname" . }}
-    items:
-    - key: ESA_credentials.txt
-        path: ESA_credentials.txt
-    - key: .grass7
-        path: .grass7
-- name: pctemplates
-    configMap:
-    name: {{ include "actinia.fullname" . }}-pc-templates
-- name: grassdb
-    persistentVolumeClaim:
-    claimName: {{ include "actinia.fullname" . }}-grassdb
+              secretName: {{ include "actinia.fullname" . }}
+              items:
+              - key: ESA_credentials.txt
+                path: ESA_credentials.txt
+          - name: pctemplates
+            configMap:
+              name: {{ include "actinia.fullname" . }}-pc-templates
         </code>
       </pre>
     </div>
@@ -523,7 +514,7 @@ statefulset.apps/dev-redis-master   1/1     118d
       </pre>
     </div>
 
-    <div id="cloud-fin" class="step slide transparent" data-x="0" data-y="275000" data-z="100000" data-rotate-x="-45" data-rotate-y="0" data-scale="100">
+    <div id="cloud-fin" class="step slide transparent" data-x="0" data-y="287000" data-z="100000" data-rotate-x="-45" data-rotate-y="0" data-scale="100">
         <img height="1000" src="img/icons/laptop.svg" />
         <img class="img-inside one" height="50" src="img/logos/shogun-logo-full-150px.png" />
         <img class="img-inside two"height="150" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
@@ -531,17 +522,15 @@ statefulset.apps/dev-redis-master   1/1     118d
         <img class="img-inside four" height="80" src="img/logos/GeoServer_Logo.svg" />
     </div>
 
-    <div id="example-after" class="step transparent" data-x="0" data-y="275000" data-z="50000" data-scale="50">
-      <!-- <img height="50" src="img/icons/terminal.jpeg" /> -->
+    <div id="example-after" class="step transparent" data-x="0" data-y="287000" data-z="50000" data-scale="50">
       <img height="500" src="img/icons/cloud.svg" />
       <img class="img-inside one" height="50" src="img/logos/shogun-logo-full-150px.png" />
       <img class="img-inside two"height="150" src="img/logos/grassgis_logo_colorlogo_text_alphabg.png" />
       <img class="img-inside three"height="150" src="img/logos/actinia_Logo_highres.svg" />
       <img class="img-inside four" height="80" src="img/logos/GeoServer_Logo.svg" />
-      <!-- <img height="50" src="img/icons/cloud.svg" /> -->
     </div>
 
-    <div id="result1" class="step slide" data-x="100000" data-y="275000" data-scale="50">
+    <div id="result1" class="step slide" data-x="100000" data-y="287000" data-scale="50">
       <h2>Erfahrungen und Empfehlungen</h2>
       <ul>
         <li>Größerer Aufwand bei Einrichtung
@@ -555,7 +544,7 @@ statefulset.apps/dev-redis-master   1/1     118d
       </ul>
     </div>
 
-    <div id="result2" class="step slide" data-x="175000" data-y="275000" data-scale="50">
+    <div id="result2" class="step slide" data-x="175000" data-y="287000" data-scale="50">
       <h2>Erfahrungen und Empfehlungen</h2>
       <ul>
         <li>Weniger Aufwand bei Migration durch Infrastructure as Code</li>
@@ -565,7 +554,7 @@ statefulset.apps/dev-redis-master   1/1     118d
       </ul>
     </div>
 
-    <div id="result3" class="step slide" data-x="250000" data-y="275000" data-scale="50">
+    <div id="result3" class="step slide" data-x="250000" data-y="287000" data-scale="50">
       <h2>Fazit / Ausblick</h2>
       <ul>
         <li>Aufsplittung in weitere Microservices</li>

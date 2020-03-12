@@ -123,6 +123,14 @@ code {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
 
+#deploy3-dc code {
+    font-size: 0.38em;
+}
+
+#deploy5-getall code {
+    font-size: 0.45em;
+}
+
 /* code.short {
     background: #FF1493;
     color: #FFC0CB;
@@ -828,7 +836,7 @@ img.logo {
 
 }
 
-#example-before img.img-inside, #example-after img.img-inside {
+#example-before img.img-inside, #example-after img.img-inside, #cloud-fin img.img-inside{
     position: absolute;
 
 }
@@ -854,23 +862,43 @@ img.logo {
 }
 
 #example-after img.img-inside.one {
-    top: 400px;
-    left: 220px;
+    top: 299px;
+    left: 236px;
 }
 
 #example-after img.img-inside.two {
-    top: 380px;
-    left: 550px;
+    top: 435px;
+    left: 85px;
 }
 
 #example-after img.img-inside.three {
-    top: 500px;
-    left: 230px;
+    top: 431px;
+    left: 286px;
 }
 
 #example-after img.img-inside.four {
-    top: 570px;
-    left: 460px;
+    top: 513px;
+    left: 531px;
+}
+
+#cloud-fin img.img-inside.one {
+    top: 288px;
+    left: 220px;
+}
+
+#cloud-fin img.img-inside.two {
+    top: 301px;
+    left: 607px;
+}
+
+#cloud-fin img.img-inside.three {
+    top: 448px;
+    left: 264px;
+}
+
+#cloud-fin img.img-inside.four {
+    top: 497px;
+    left: 526px;
 }
 
 .image-block {
@@ -884,4 +912,17 @@ img.logo {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+}
+
+p.strikethrough {
+    color: red;
+    text-decoration: line-through;
+    display: inline;
+}
+
+img#red-cross {
+    height: 300px;
+    left: 500px;
+    top: 200px;
+    position: absolute;
 }
