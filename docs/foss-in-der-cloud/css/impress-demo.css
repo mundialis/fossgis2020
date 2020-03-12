@@ -206,8 +206,8 @@ code {
     box-shadow: none;
 }
 
-.step.transparent.ende {
-    padding-top: 0;
+.step.ende {
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .ortho {
@@ -882,23 +882,23 @@ img.logo {
 }
 
 #cloud-fin img.img-inside.one {
-    top: 288px;
-    left: 220px;
+  top: 375px;
+  left: 236px;
 }
 
 #cloud-fin img.img-inside.two {
-    top: 301px;
-    left: 607px;
+  top: 350px;
+  left: 650px;
 }
 
 #cloud-fin img.img-inside.three {
-    top: 448px;
-    left: 264px;
+  top: 500px;
+  left: 250px;
 }
 
 #cloud-fin img.img-inside.four {
-    top: 497px;
-    left: 526px;
+  top: 550px;
+  left: 550px;
 }
 
 .image-block {
@@ -912,6 +912,7 @@ img.logo {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  align-items: center;
 }
 
 p.strikethrough {
