@@ -927,3 +927,8 @@ img#red-cross {
     top: 200px;
     position: absolute;
 }
+
+p.tree-new {
+  color: green;
+  display: inline;
+}

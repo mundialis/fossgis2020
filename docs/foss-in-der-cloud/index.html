@@ -221,7 +221,7 @@
       <ul>
         <li>Pipeline auf gitlab-ci / travis / …
             <ul>
-                <li>zum Bauen des Dockerfiles</li>
+                <li>zum Bauen des Images</li>
                 <li>zum Veröffentlichen des Images in Docker Registry</li>
             </ul></li>
         <li>Alternativ mit Build Helm Chart</li>
@@ -241,6 +241,8 @@ drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 -rw-r--r-- 1 user user  491 Mär  6 11:02 .gitlab-ci.yml
 drwxr-xr-x 3 user user 4,0K Mär  6 11:02 pc_templates
 -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
+
+----
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
@@ -266,6 +268,8 @@ drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 <p class="strikethrough">drwxr-xr-x 3 user user 4,0K Mär  6 11:02 pc_templates</p>
 -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
 
+----
+
 FROM mundialis/actinia-core:g78-latest-alpine
 
 <p class="strikethrough">COPY actinia.cfg /etc/default/actinia</p>
@@ -287,6 +291,8 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
   -rw-r--r-- 1 user user  491 Mär  6 11:02 .gitlab-ci.yml
   -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
 
+  ----
+
   FROM mundialis/actinia-core:g78-latest-alpine
 
   RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
@@ -303,6 +309,8 @@ RUN grass --tmp-location EPSG:4326 --exec g.extension -s extension=i.sentinel
 drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 -rw-r--r-- 1 user user  491 Mär  6 11:02 .gitlab-ci.yml
 -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
+
+----
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
@@ -321,6 +329,8 @@ FROM mundialis/actinia-core:g78-latest-alpine
 drwxr-xr-x 8 user user 4,0K Mär  6 11:02 .git
 -rw-r--r-- 1 user user  491 Mär  6 11:02 .gitlab-ci.yml
 -rw-r--r-- 1 user user 4,2K Mär  6 11:02 README.md
+
+----
 
 FROM mundialis/actinia-core:g78-latest-alpine
 
@@ -371,17 +381,17 @@ actinia
 ├── charts
 ├── Chart.yaml
 ├── templates
-│   ├── configmap.yaml
+<p class="tree-new">│   ├── configmap.yaml</p>
 │   ├── deployment.yaml
 │   ├── _helpers.tpl
 │   ├── ingress.yaml
-│   ├── secret.yaml
+<p class="tree-new">│   ├── secret.yaml</p>
 │   ├── NOTES.txt
 │   └── service.yaml
 ├── values.yaml
-├── values-dev.yaml
-├── values-int.yaml
-└── values-prod.yaml
+<p class="tree-new">├── values-dev.yaml</p>
+<p class="tree-new">├── values-int.yaml</p>
+<p class="tree-new">└── values-prod.yaml</p>
         </code>
       </pre>
     </div>
